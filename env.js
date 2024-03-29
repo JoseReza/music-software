@@ -26,7 +26,7 @@ var PUBLISH_HOST = (window.location.hostname == "localhost" || window.location.h
 
 //_OAUTH
 
-var CLIENT_ID = "e5b9ae3903d5b3c533c7";
+var CLIENT_ID = "8d39c5f882c801b22e4d";
 var CLIENT_HOST = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}`;
 var CLIENT_HOST_LOGOUT = "https://github.com/logout";
 
