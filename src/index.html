@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="./assets/icon/icon.svg" type="image/x-icon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./assets/bootstrap.css" />
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./index.css">
+  <title>Music Software</title>
+</head>
+
+<body>
+  <div id="divIframe">
+    <div id="divIframeClose">X</div>
+    <iframe id="iframe" allow="clipboard-write"></iframe>
+  </div>
+  <div id="divLoadingMain">
+    <div style="margin: 15%;">
+      <img src="./assets/icon/icon.svg" style="width: 100px;" class="animation">
+      <br>
+      <br>
+      <h1>Music Software</h1>
+      <div id="divAdviceMain"></div>
+    </div>
+  </div>
+  <div id="divLoadingSecondary">
+    <div style="margin: 15%;">
+      <img src="./assets/icon/icon.svg" style="width: 100px;" class="animation">
+      <br>
+      <br>
+      <h1>Loading...</h1>
+      <div id="divAdviceSecondary"></div>
+    </div>
+  </div>
+  <div style="z-index: 0;">
+    <div id="divNavbar">
+      <div id="divTitleNavbar">
+        <img src="./assets/icon/icon.svg" id="logo">
+        <div id="divTitle">
+          Music Software
+        </div>
+      </div>
+      <div id="divSounds" class="button"><img src="./assets/images/sound.svg" width="25">&nbsp;Sounds</div>
+      <div id="divScripts" class="button"><img src="./assets/images/script.svg" width="25">&nbsp;Scripts</div>
+      <div id="divImportProject" class="button"><img src="./assets/images/export.svg" width="25"
+          style="transform: rotate(180deg);">&nbsp;Import</div>
+      <div id="divExportProject" class="button"><img src="./assets/images/export.svg" width="25">&nbsp;Export</div>
+      <div id="divPublishProject" class="button"><img src="./assets/images/export.svg" width="25"
+          style="transform: rotate(270deg);">&nbsp;Publish</div>
+      <div id="divUser" class="button"
+        style="display: flex; white-space: nowrap; padding: 0.5rem; width: 14rem; margin-left: 1rem;">
+        <img id="divUserImage"
+          style="border-radius: 35%; margin-right: 0.5rem; width: 30px; height: 30px; margin-left: 1rem;"
+          src="./assets/images/defaultUser.png">
+        <div id="divUserName" style="margin-top: 0.25rem;">User name</div>
+      </div>
+      <div class="button" id="divLogout">
+        Logout
+        <img src="./assets/images/logout.svg" width="25">
+      </div>
+    </div>
+    <div class="horizontal" style="width: 100%;">
+      <div id="divmodules"></div>
+      <div id="divOptions">
+        <div id="divCreateModule" class="button"><img src="./assets/images/plus.svg" width="25">&nbsp;Create</div>
+        <div id="divDeleteModule" class="button"><img src="./assets/images/less.svg" width="25">&nbsp;Delete</div>
+      </div>
+    </div>
+    <div class="horizontal">
+      <div id="divEditor"></div>
+      <div id="padding-bar"></div>
+      <div class="vertical">
+        <div id="divPlayPause">
+          <img src="./assets/images/play.svg" width="35">
+        </div>
+        <div id="divConsole"></div>
+        <progress id="divProgress" value="0" max="100"></progress>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./../env.js"></script>
+<script src="./packages.js"></script>
+<script src="./assets/utils.js"></script>
+<script src="./assets/instruments.js"></script>
+<script src="./assets/time-line.js"></script>
+<script src="./assets/transport.js"></script>
+<script src="./assets/loading.js"></script>
+<script src="./assets/editor/ace.js"></script>
+<script src="./assets/editor/ext-language_tools.js"></script>
+<script src="./assets/project.js"></script>
+<script src="./assets/console.js"></script>
+<script src="./user.js"></script>
+<script src="./index.js"></script>
+
+</html>

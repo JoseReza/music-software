@@ -1,0 +1,380 @@
+:root {
+    --left-width: 62%;
+    --right-width: 32%;
+    --padding-bar-width: 1%;
+
+    --border-radius: 5px;
+    --primar-color: rgb(33, 150, 243);
+}
+
+/* The animation code */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(180deg);
+    }
+
+    66% {
+        transform: rotate(360deg);
+    }
+
+}
+
+progress {
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primar-color);
+}
+
+/* The element to apply the animation to */
+.animation {
+    animation-name: rotation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#divNavbar {
+    padding: 0.75rem;
+    background-color: rgb(51, 51, 51);
+    width: 95%;
+    margin-left: 1%;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    display: flex;
+}
+
+#divTitleNavbar {
+    background-color: #444;
+    color: white;
+    border-radius: var(--border-radius);
+    border-bottom: solid 3px var(--primar-color);
+    border-right: solid 3px var(--primar-color);
+    float: left;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    cursor: pointer;
+    display: flex;
+}
+
+#divTitle {
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    float: left;
+    white-space: nowrap;
+}
+
+#logo {
+    width: 40px;
+    float: left;
+    margin-right: 1rem;
+}
+
+.button {
+    background-color: #444;
+    color: white;
+    margin-left: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: solid 3px var(--primar-color);
+    border-right: solid 3px var(--primar-color);
+    min-height: 2rem;
+    white-space: nowrap;
+}
+
+/* pc */
+@media only screen and (min-width: 768px) {
+
+
+    .horizontal {
+        display: flex;
+    }
+
+    .vertical {
+        display: block;
+        width: var(--right-width);
+        margin-left: 1%;
+    }
+
+    #padding-bar {
+        display: block;
+        background-color: white;
+        width: var(--padding-bar-width);
+        height: 34rem;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        cursor: grab;
+    }
+
+    #divmodules {
+        position: relative;
+        width: var(--left-width);
+        height: 3rem;
+        border: 1px;
+        background-color: rgb(51, 51, 51);
+        margin-left: 1%;
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        color: black;
+        overflow-x: auto;
+        display: flex;
+        padding: 0.25rem;
+        white-space: nowrap;
+    }
+
+    #divOptions {
+        position: relative;
+        width: var(--right-width);
+        height: 3rem;
+        margin-left: 1%;
+        border: 1px;
+        background-color: rgb(51, 51, 51);
+        border-radius: var(--border-radius);
+        color: white;
+        overflow: hidden;
+        display: inline-flex;
+        padding: 0.25rem;
+    }
+
+    #divEditor {
+        position: relative;
+        width: calc(var(--left-width) - 1%);
+        height: 34rem;
+        border: 1px;
+        margin-left: 1%;
+    }
+
+    #divConsole {
+        position: relative;
+        height: 28.5rem;
+        border: 1px;
+        background-color: #444;
+        color: white;
+        border-radius: var(--border-radius);
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-left: 1%;
+        margin-top: 1rem;
+        word-wrap: break-word;
+    }
+
+    #divProgress {
+        width: 100%;
+        min-height: 2rem;
+    }
+
+    #divPlayPause {
+        height: 2.5rem;
+        margin-left: 1%;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        text-align: center;
+        background-color: #777;
+    }
+
+    #divPlayPause:hover {
+        height: 2.5rem;
+        margin-left: 1%;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        background-color: white;
+        color: white;
+        text-align: center;
+    }
+
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+
+    #padding-bar {
+        display: none;
+    }
+
+    #divmodules {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 1rem;
+        height: 3rem;
+        border: 1px;
+        float: left;
+        background-color: rgb(51, 51, 51);
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        color: black;
+        overflow-x: auto;
+        display: flex;
+        padding: 0.25rem;
+    }
+
+    #divOptions {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        border: 1px;
+        float: left;
+        background-color: rgb(51, 51, 51);
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        color: white;
+        overflow: hidden;
+        display: inline-flex;
+        padding: 0.25rem;
+    }
+
+    #divEditor {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        height: 36rem;
+        border: 1px;
+        float: left;
+    }
+
+    #divConsole {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        height: 9.5rem;
+        border: 1px;
+        float: left;
+        background-color: #444;
+        color: white;
+        border-radius: var(--border-radius);
+        overflow-x: hidden;
+        overflow-y: auto;
+        word-wrap: break-word;
+    }
+
+    #divProgress {
+        width: 90%;
+        margin-left: 5%;
+        min-height: 2rem;
+    }
+
+    #divPlayPause {
+        width: 80%;
+        height: 2.5rem;
+        float: left;
+        margin-top: 1rem;
+        margin-left: 8%;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        border-radius: var(--border-radius);
+        text-align: center;
+        margin-bottom: 3rem;
+        background-color: #777;
+        color: black;
+    }
+
+    #divPlayPause:hover {
+        width: 80%;
+        height: 2.5rem;
+        float: left;
+        margin-top: 1rem;
+        margin-left: 8%;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        background-color: white;
+        color: white;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+#divLoadingMain {
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    background-color: #222;
+    color: white;
+}
+
+#divLoadingSecondary {
+    text-align: center;
+    z-index: 100;
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    background-color: #222;
+    backdrop-filter: blur(4px);
+    color: white;
+    display: none;
+    border: solid 4px var(--primar-color);
+}
+
+#divIframe {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    z-index: 100;
+    position: absolute;
+    background-color: #222;
+    color: white;
+    display: none;
+    overflow: hidden;
+    border-bottom: solid 3px var(--primar-color);
+    border-left: solid 3px var(--primar-color);
+    border-right: solid 3px var(--primar-color);
+}
+
+#divIframeClose {
+    background-color: red;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+#iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#divPublish {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    z-index: 100;
+    position: absolute;
+    background-color: #222;
+    color: white;
+    display: none;
+    overflow: hidden;
+    border-bottom: solid 3px var(--primar-color);
+    border-left: solid 3px var(--primar-color);
+    border-right: solid 3px var(--primar-color);
+}
+
+#divPublishClose {
+    background-color: red;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
