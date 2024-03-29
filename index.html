@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/icon/icon.png" type="image/x-icon">
+    <title>Music Software</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    var currentUrl = window.location.href;
+    var paramName = 'code';
+    var paramValue = (new URLSearchParams(new URL(currentUrl).search)).get(paramName);
+
+    if (paramValue) {
+        window.location = `./src/index.html?${paramName}=${paramValue}`;
+    } else {
+        window.location = "./src";
+    }
+</script>
+
+</html>

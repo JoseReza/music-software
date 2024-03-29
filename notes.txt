@@ -1,0 +1,34 @@
+A - La
+B - Si
+C - Do
+D - Re
+E - Mi
+F - Fa
+G - Sol
+
+//Melodia de corrido tumbado en acordes y notas
+
+Introducción:
+C - G - Am - Em
+
+Verso:
+C - G - Am - Em
+C - G - Am - Em
+F - G - C - E7
+
+Estribillo:
+Am - Em - F - C
+Am - Em - F - G
+
+Puente:
+Dm - G - Am - Em
+Dm - G - Am - Em
+F - G - C - E7
+
+Estribillo (Repetición):
+Am - Em - F - C
+Am - Em - F - G
+
+Final (Puede ser similar a la introducción o estribillo):
+Am - Em - F - C
+Am - Em - F - G
