@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./../assets/icon/icon.svg" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./../assets/bootstrap.css" />
+    <link rel="manifest" href="./../manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./../index.css">
+    <title>Music Software</title>
+</head>
+
+<body>
+    <div style="z-index: 1000; position: fixed; text-align: center; padding: 5rem; width: 100%; background-color: #222; height: 100%; border-radius: 10px; display: none;" 
+        id="divPublishing">
+        <h3>
+            Uploading...
+        </h3>
+    </div>
+    <div style="color: white;">
+        <div style="width: 50%; margin-left: 25%; margin-top: 4rem; margin-bottom: 4rem;">
+            <div style="margin: 1rem; width: 100%;">
+                <h1 style="margin: 3rem; text-align: center;">Upload project</h1>
+                <h4>Upload here your project to protect and backup author rigths</h4>
+                <input type="text" id="inputProjectName" placeholder="Project name" style="width: 100%;">
+                <div style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <div style="width: 50%; float: left;">
+                        <div>Script input .ms or .mse</div>
+                        <input id="inputScript" type="file" accept=".ms, .mse">
+                    </div>
+                    <div style="width: 50%; float: left;">
+                        <div>Audio input .wav or .mp3</div>
+                        <input id="inputAudio" type="file" accept=".wav, .mp3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+        </div>
+        <br>
+        <br>
+        <div style="width: 90%; margin-left: 5%; text-align: center; margin-top: 2rem;">
+            <div style="text-align: center;">
+                <div style="width: 80%; margin-left: 10%; cursor: pointer; background-color: #00d0ff; border-radius: 5px; padding: 1rem; margin-bottom: 1rem;" id="checkout">
+                    <h2>Checkout</h2>
+                </div>
+                <div id="paypal-button-container" style="width: 100%; display: none;"></div>
+            </div>
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=AYuVQJPWsa7MiNn9XuG5tHdeRB0dHZHiu2pd7U5h7VioK-9mCbCIeEGRcaZhrA-uBlehSpMVlBe_kSnV&currency=USD"
+                data-sdk-integration-source="button-factory"></script>
+        </div>
+</body>
+<script src="./../../env.js"></script>
+<script src="./../user.js"></script>
+<script src="./publish.js" type="module"></script>
+
+</html>
